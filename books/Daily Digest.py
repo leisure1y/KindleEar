@@ -15,7 +15,7 @@ def getBook():
 class tech(BaseFeedBook):
     title                 = u'Tech News'
     __author__            = 'calibre'
-    description           = u'Ã¿ÖÜ¿Æ¼¼ĞÂÎÅ¾«Ñ¡£¬ÖªºõÎÊ´ğ¾«Ñ¡£¬Quora¾«Ñ¡£¬¶¹°ê£¬²©¿Í£¬¾­¼ÃÑ§ÈËChinaºÍTech²¿·Ö£¬¸÷ÖÖ¿ÆÆÕ£¬¹û¿ÇÌìÎÄ£¬ÉîÒ¹Ê³ÌÃ£¬ÊıÑ§¾«Ñ¡¡£'
+    description           = u'æ¯å‘¨ç§‘æŠ€æ–°é—»ç²¾é€‰ï¼ŒçŸ¥ä¹é—®ç­”ç²¾é€‰ï¼ŒQuoraç²¾é€‰ï¼Œè±†ç“£ï¼Œåšå®¢ï¼Œç»æµå­¦äººChinaå’ŒTechéƒ¨åˆ†ï¼Œå„ç§ç§‘æ™®ï¼Œæœå£³å¤©æ–‡ï¼Œæ·±å¤œé£Ÿå ‚ï¼Œæ•°å­¦ç²¾é€‰ã€‚'
     language              = 'zh-cn'
     feed_encoding         = "utf-8"
     page_encoding         = "utf-8"
@@ -26,30 +26,13 @@ class tech(BaseFeedBook):
     max_articles_per_feed = 9
     deliver_days          = ['Friday']
     feeds = [
-        ('Ï¹³¶', 'http://zhihurss.miantiao.me/section/id/2'),
-        (u'¶¹°êÒ»¿Ì', 'http://yikerss.miantiao.me/rss'),
-        (u'ÖªºõÈÕ±¨', 'http://zhihurss.miantiao.me/dailyrss'),
-        ('Öªºõ¾«Ñ¡', 'http://www.zhihu.com/rss'),
-        ('ÉîÒ¹Ê³ÌÃ', 'http://zhihurss.miantiao.me/section/id/1'),
+        ('çæ‰¯', 'http://zhihurss.miantiao.me/section/id/2'),
+        (u'è±†ç“£ä¸€åˆ»', 'http://yikerss.miantiao.me/rss'),
+        (u'çŸ¥ä¹æ—¥æŠ¥', 'http://zhihurss.miantiao.me/dailyrss'),
+        ('çŸ¥ä¹ç²¾é€‰', 'http://www.zhihu.com/rss'),
+        ('æ·±å¤œé£Ÿå ‚', 'http://zhihurss.miantiao.me/section/id/1'),
         (u'Quora ', 'http://www.quora.com/rss'),
-        (u'MIT¿Æ¼¼ÆÀÂÛ', 'http://www.technologyreview.com/topnews.rss'),
+        (u'MITç§‘æŠ€è¯„è®º', 'http://www.technologyreview.com/topnews.rss'),
         ]
 
-    def url4forwarder(self, url):
-        ' Éú³É¾­¹ı×ª·¢Æ÷µÄURL '
-        return SHARE_FUCK_GFW_SRV % urllib.quote(url)
-
-    def url4forwarder_backup(self, url):
-        ' Éú³É¾­¹ı×ª·¢Æ÷µÄURL '
-        return SHARE_SRV % urllib.quote(url)
-
-    def fetcharticle(self, url, opener, decoder):
-        """Á´½ÓÍøÒ³»ñÈ¡Ò»ÆªÎÄÕÂ"""
-        if self.fulltext_by_instapaper and not self.fulltext_by_readability:
-            url = "http://www.instapaper.com/m?u=%s" % self.url_unescape(url)
-        if "daily.zhihu.com" in url:
-            url = self.url4forwarder(url)
-        if "economist.com" in url:
-            url = self.url4forwarder(url)
-    
-        return self.fetch(url, opener, decoder)
+   
