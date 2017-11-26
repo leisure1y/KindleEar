@@ -26,20 +26,23 @@ class Economist(BaseFeedBook):
         ('Britain', 'http://www.economist.com/rss/britain_rss.xml'),
         ('Europe', 'http://www.economist.com/rss/europe_rss.xml'),
         ('United States', 'http://www.economist.com/rss/united_states_rss.xml'),
-        ('The Americas', 'http://www.economist.com/rss/the_americas_rss.xml'),
+        ('The Americas', 'http://www.economist.com/sections/americas/rss.xml'),
         ('Middle East and Africa', 'http://www.economist.com/rss/middle_east_and_africa_rss.xml'),
-        ('Asia', 'http://www.economist.com/rss/asia_rss.xml'),
-        ('China', 'http://www.economist.com/rss/china_rss.xml'),
+        ('Asia', 'http://www.economist.com/feeds/print-sections/73/asia.xml'),
+        ('China', 'http://www.economist.com/feeds/print-sections/77729/china.xml'),
         ('International', 'http://www.economist.com/rss/international_rss.xml'),
         ('Business', 'http://www.economist.com/rss/business_rss.xml'),
         ('Finance and economics', 'http://www.economist.com/rss/finance_and_economics_rss.xml'),
-        ('Science and technology', 'http://www.economist.com/rss/science_and_technology_rss.xml'),
+        ('Science and technology', 'http://www.economist.com/feeds/print-sections/80/science-and-technology.xml'),
         ('Books and arts', 'http://www.economist.com/rss/books_and_arts_rss.xml'),
         ('Obituary', 'http://www.economist.com/rss/obituary_rss.xml'),
         ('Indicators', 'http://www.economist.com/rss/indicators_rss.xml'),
+        ('Business and finance','http://www.economist.com/sections/business-finance/rss.xml'),
+        ('Economic','http://www.economist.com/sections/economics/rss.xml'),
+        ('Culture','http://www.economist.com/sections/culture/rss.xml'),
         ]
     
-    #ÏÂÃæÊÇÔÚÆäÍøÕ¾»¹Ã»ÓĞÌá¹©RSSÇ°µÄ×¥È¡·½Ê½£¬ÏÖÔÚÒÑ¾­²»ĞèÒªÁË£¬ÒòÎªÖ±½ÓÓĞRSSÔ´ÁË
+    #ä¸‹é¢æ˜¯åœ¨å…¶ç½‘ç«™è¿˜æ²¡æœ‰æä¾›RSSå‰çš„æŠ“å–æ–¹å¼ï¼Œç°åœ¨å·²ç»ä¸éœ€è¦äº†ï¼Œå› ä¸ºç›´æ¥æœ‰RSSæºäº†
     """
     feeds = [
             ('Index', 'http://www.economist.com/printedition'),
@@ -59,7 +62,7 @@ class Economist(BaseFeedBook):
         content = result.content.decode(self.feed_encoding)
         soup = BeautifulSoup(content, "lxml")
         
-        #GAE»ñÈ¡µ½µÄÊÇÒÆ¶¯¶ËÍøÒ³£¬ºÍPC»ñÈ¡µ½µÄÍøÒ³ÓĞĞ©²»Ò»Ñù
+        #GAEè·å–åˆ°çš„æ˜¯ç§»åŠ¨ç«¯ç½‘é¡µï¼Œå’ŒPCè·å–åˆ°çš„ç½‘é¡µæœ‰äº›ä¸ä¸€æ ·
         for section in soup.find_all('section', attrs={'id':lambda x: x and 'section' in x}):
             h4 = section.find('h4')
             if h4 is None:
@@ -91,7 +94,7 @@ class Economist(BaseFeedBook):
                             urls.append((sectitle,title,url,None))
                             urladded.add(url)
                             
-        #ÓĞĞ©ÈË»ñÈ¡µ½µÄÊÇPC¶ËÍøÒ³£¬¹ÖÁË£¬ÔÙ·ÖÎöÒ»´ÎPC¶ËÍøÒ³°É  
+        #æœ‰äº›äººè·å–åˆ°çš„æ˜¯PCç«¯ç½‘é¡µï¼Œæ€ªäº†ï¼Œå†åˆ†æä¸€æ¬¡PCç«¯ç½‘é¡µå§  
         if len(urls) == 0:
             for section in soup.find_all('div', attrs={'id':lambda x: x and 'section' in x}):
                 h4 = section.find('h4')
