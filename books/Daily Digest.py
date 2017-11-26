@@ -13,9 +13,9 @@ def getBook():
     return tech
 
 class tech(BaseFeedBook):
-    title                 = u'Tech News'
+    title                 = u'Daily Digest'
     __author__            = 'calibre'
-    description           = u'每周科技新闻精选，知乎问答精选，Quora精选，豆瓣，博客，经济学人China和Tech部分，各种科普，果壳天文，深夜食堂，数学精选。'
+    description           = u'瞎扯，豆瓣一刻，知乎日报，知乎精选，深夜食堂，Quora，MIT科技评论'
     language              = 'zh-cn'
     feed_encoding         = "utf-8"
     page_encoding         = "utf-8"
