@@ -8,10 +8,10 @@ def getBook():
 
 class tech(BaseFeedBook):
     title                 = u'Tech News'
-    description           = u'Ã¿ÖÜ¿Æ¼¼ĞÂÎÅ¾«Ñ¡£¬ÖªºõÎÊ´ğ¾«Ñ¡£¬Quora¾«Ñ¡£¬¶¹°ê£¬²©¿Í£¬¾­¼ÃÑ§ÈËChinaºÍTech²¿·Ö£¬¸÷ÖÖ¿ÆÆÕ£¬¹û¿ÇÌìÎÄ£¬ÉîÒ¹Ê³ÌÃ£¬ÊıÑ§¾«Ñ¡¡£'
+    description           = u'æ¯å‘¨ç§‘æŠ€æ–°é—»ç²¾é€‰ï¼ŒçŸ¥ä¹é—®ç­”ç²¾é€‰ï¼ŒQuoraç²¾é€‰ï¼Œè±†ç“£ï¼Œåšå®¢ï¼Œç»æµå­¦äººChinaå’ŒTechéƒ¨åˆ†ï¼Œå„ç§ç§‘æ™®ï¼Œæœå£³å¤©æ–‡ï¼Œæ·±å¤œé£Ÿå ‚ï¼Œæ•°å­¦ç²¾é€‰ã€‚'
     language              = 'zh-cn'
     feed_encoding         = "utf-8"
-    page_encoding         = "GBK"
+    page_encoding         = "utf-8"
     mastheadfile          = "mh_technews.gif"
     coverfile             = "cv_technews.jpg"
     network_timeout       = 60
@@ -22,34 +22,34 @@ class tech(BaseFeedBook):
     deliver_days          = ['Friday']
     feeds = [
         ('36kr', 'http://www.36kr.com/feed?1.0'),
-        (u'TechCrunch ÖĞ¹ú', 'http://techcrunch.cn/feed/'),
-        (u'°®·¶¶ù', 'http://www.ifanr.com/feed'),
+        (u'TechCrunch ä¸­å›½', 'http://techcrunch.cn/feed/'),
+        (u'çˆ±èŒƒå„¿', 'http://www.ifanr.com/feed'),
         ('Top News - MIT Technology Review', 'http://www.technologyreview.com/topnews.rss'),
         ('Hacker News', 'https://news.ycombinator.com/rss'),
-        (u'ÂéÊ¡Àí¹¤¿Æ¼¼ÆÀÂÛ', 'http://zhihurss.miantiao.me/section/id/14'),
-        (u'´ó¹«Ë¾ÈÕ±¨', 'http://zhihurss.miantiao.me/daily/id/5'),
-        (u'Ğ¡µÀÏûÏ¢', 'http://hutu.me/feed'),
-        (u'¼«¿Í¹«Ô°', 'http://www.geekpark.net/rss'),
-        (u'¼«¿Í·¶', 'http://www.geekfan.net/feed/'),
-        (u'ÈËÈË¶¼ÊÇ²úÆ·¾­Àí', 'http://iamsujie.com/feed/'),
-        (u'×Ş½£²¨Kant', 'http://kant.cc/feed'),
+        (u'éº»çœç†å·¥ç§‘æŠ€è¯„è®º', 'http://zhihurss.miantiao.me/section/id/14'),
+        (u'å¤§å…¬å¸æ—¥æŠ¥', 'http://zhihurss.miantiao.me/daily/id/5'),
+        (u'å°é“æ¶ˆæ¯', 'http://hutu.me/feed'),
+        (u'æå®¢å…¬å›­', 'http://www.geekpark.net/rss'),
+        (u'æå®¢èŒƒ', 'http://www.geekfan.net/feed/'),
+        (u'äººäººéƒ½æ˜¯äº§å“ç»ç†', 'http://iamsujie.com/feed/'),
+        (u'é‚¹å‰‘æ³¢Kant', 'http://kant.cc/feed'),
         ('warfalcon', 'http://ys.8wss.com/rss/oIWsFtxo3oqejVy4KaJ4RDMVIrE0/'),
-        (u'¶¹°êÒ»¿Ì', 'http://yikerss.miantiao.me/rss'),
-        (u'»·Çò¿ÆÑ§', 'http://blog.sina.com.cn/rss/sciam.xml'),
-        (u'¿ÆÆÕ¹«Ô°', 'http://www.scipark.net/feed/'),
-        (u'¿ÆÑ§ËÉÊó»á', 'http://songshuhui.net/feed'),
-        (u'·º¿ÆÑ§', 'http://pansci.tw/feed'),
-        (u'¹û¿ÇÍø', 'http://www.guokr.com/rss/'),
-        (u'¹û¿ÇÍø¿ÆÑ§ÈË', 'http://feed43.com/8781486786220071.xml'),
-        (u'¼òÊéÍÆ¼ö', 'http://jianshu.milkythinking.com/feeds/recommendations/notes'),
+        (u'è±†ç“£ä¸€åˆ»', 'http://yikerss.miantiao.me/rss'),
+        (u'ç¯çƒç§‘å­¦', 'http://blog.sina.com.cn/rss/sciam.xml'),
+        (u'ç§‘æ™®å…¬å›­', 'http://www.scipark.net/feed/'),
+        (u'ç§‘å­¦æ¾é¼ ä¼š', 'http://songshuhui.net/feed'),
+        (u'æ³›ç§‘å­¦', 'http://pansci.tw/feed'),
+        (u'æœå£³ç½‘', 'http://www.guokr.com/rss/'),
+        (u'æœå£³ç½‘ç§‘å­¦äºº', 'http://feed43.com/8781486786220071.xml'),
+        (u'ç®€ä¹¦æ¨è', 'http://jianshu.milkythinking.com/feeds/recommendations/notes'),
         ('Quora', 'http://www.quora.com/rss', True),
         ('The Economist: China', 'http://www.economist.com/feeds/print-sections/77729/china.xml'),
         ('The Economist: Science and technology', 'http://www.economist.com/feeds/print-sections/80/science-and-technology.xml'),
         ('The Economist: Asia', 'http://www.economist.com/feeds/print-sections/73/asia.xml'),
-        (u'ÖªºõÈÕ±¨', 'http://zhihurss.miantiao.me/dailyrss'),
-        (u'Öªºõ¾«Ñ¡', 'http://www.zhihu.com/rss'),
-        (u'ÉîÒ¹Ê³ÌÃ', 'http://zhihurss.miantiao.me/section/id/1'),
-        (u'¹û¿ÇÍøÌìÎÄ', 'http://feed43.com/3144628515834775.xml'),
+        (u'çŸ¥ä¹æ—¥æŠ¥', 'http://zhihurss.miantiao.me/dailyrss'),
+        (u'çŸ¥ä¹ç²¾é€‰', 'http://www.zhihu.com/rss'),
+        (u'æ·±å¤œé£Ÿå ‚', 'http://zhihurss.miantiao.me/section/id/1'),
+        (u'æœå£³ç½‘å¤©æ–‡', 'http://feed43.com/3144628515834775.xml'),
         ('Matrix67', 'http://www.matrix67.com/blog/feed'),
         ]
 
