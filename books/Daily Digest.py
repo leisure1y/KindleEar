@@ -24,7 +24,7 @@ class tech(BaseFeedBook):
     network_timeout       = 60
     oldest_article        = 7
     max_articles_per_feed = 9
-    deliver_days          = ['Friday']
+    deliver_days          = []
     feeds = [
         ('瞎扯', 'http://zhihurss.miantiao.me/section/id/2'),
         (u'豆瓣一刻', 'http://yikerss.miantiao.me/rss'),
