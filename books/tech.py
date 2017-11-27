@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import re, datetime
-import urllib
-import json
 from bs4 import BeautifulSoup
-from lib.urlopener import URLOpener
 from base import BaseFeedBook
-from config import SHARE_FUCK_GFW_SRV
 
 def getBook():
     return tech
@@ -56,20 +51,4 @@ class tech(BaseFeedBook):
         ('Matrix67', 'http://www.matrix67.com/blog/feed'),
         ]
 		
-		def url4forwarder(self, url):
-        ' 生成经过转发器的URL '
-        return SHARE_FUCK_GFW_SRV % urllib.quote(url)
-
-    def url4forwarder_backup(self, url):
-        ' 生成经过转发器的URL '
-        return SHARE_SRV % urllib.quote(url)
-
-    def fetcharticle(self, url, opener, decoder):
-        """链接网页获取一篇文章"""
-        if self.fulltext_by_instapaper and not self.fulltext_by_readability:
-            url = "http://www.instapaper.com/m?u=%s" % self.url_unescape(url)
-        if "daily.zhihu.com" in url:
-            url = self.url4forwarder(url)
-    
-        return self.fetch(url, opener, decoder)
-
+	
