@@ -6,7 +6,7 @@ from base import BaseFeedBook, URLOpener, string_of_tag
 def getBook():
     return Economist123
 
-class Economist(BaseFeedBook):
+class Economist123(BaseFeedBook):
     title                 = 'The Economist123'
     description           = 'Global news and current affairs from a European perspective. deliver on Friday.'
     language              = 'en'
@@ -38,7 +38,7 @@ class Economist(BaseFeedBook):
         content = result.content.decode(self.feed_encoding)
         soup = BeautifulSoup(content, "lxml")
         
-        #GAE»ñÈ¡µ½µÄÊÇÒÆ¶¯¶ËÍøÒ³£¬ºÍPC»ñÈ¡µ½µÄÍøÒ³ÓĞĞ©²»Ò»Ñù
+        #GAEè·å–åˆ°çš„æ˜¯ç§»åŠ¨ç«¯ç½‘é¡µï¼Œå’ŒPCè·å–åˆ°çš„ç½‘é¡µæœ‰äº›ä¸ä¸€æ ·
         for section in soup.find_all('section', attrs={'id':lambda x: x and 'section' in x}):
             h4 = section.find('h4')
             if h4 is None:
