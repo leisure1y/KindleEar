@@ -21,7 +21,6 @@ class leisure(BaseFeedBook):
     oldest_article        = 7
     max_articles_per_feed = 9
     deliver_days          = []
-    oldest_article = 1
     feeds = [
 	(u'36kr','http://www.36kr.com/feed?1.0'),
 	(u'TechCrunch 中国', 'http://techcrunch.cn/feed/'),
