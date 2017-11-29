@@ -27,5 +27,5 @@ class tech(BaseFeedBook):
         ('The Economist: Science and technology', 'http://www.economist.com/feeds/print-sections/80/science-and-technology.xml'),
         ('The Economist: Asia', 'http://www.economist.com/feeds/print-sections/73/asia.xml'),
         (u'果壳网天文', 'http://feed43.com/3144628515834775.xml'),
-        ('Matrix67', 'http://www.matrix67.com/blog/feed'),
+        ('Matrix67', 'http://www.matrix67.com/blog/feed')
         ]
