@@ -2,7 +2,6 @@
 # -*- coding:utf-8 -*-
 
 from bs4 import BeautifulSoup
-from base import BaseFeedBook
 
 def getBook():
     return tech
