@@ -9,7 +9,7 @@ def getBook():
     return leisure
 
 class leisure(BaseFeedBook):
-    title                 = u'Tech News'
+    title                 = u'leisure'
     __author__            = 'calibre'
     description           = u'科技科普以及趣味精选。'
     language = 'zh-cn'
