@@ -19,12 +19,12 @@ class tech(BaseFeedBook):
     max_articles_per_feed = 9
     deliver_days          = ['Friday']
     feeds = [
-        ('36kr', 'http://www.36kr.com/feed?1.0'),
+        (u'36kr', 'http://www.36kr.com/feed?1.0'),
         (u'TechCrunch 中国', 'http://techcrunch.cn/feed/'),
-        ('Quora', 'http://www.quora.com/rss', True),
-        ('The Economist: China', 'http://www.economist.com/feeds/print-sections/77729/china.xml'),
-        ('The Economist: Science and technology', 'http://www.economist.com/feeds/print-sections/80/science-and-technology.xml'),
-        ('The Economist: Asia', 'http://www.economist.com/feeds/print-sections/73/asia.xml'),
+        (u'Quora', 'http://www.quora.com/rss', True),
+        (u'The Economist: China', 'http://www.economist.com/feeds/print-sections/77729/china.xml'),
+        (u'The Economist: Science and technology', 'http://www.economist.com/feeds/print-sections/80/science-and-technology.xml'),
+        (u'The Economist: Asia', 'http://www.economist.com/feeds/print-sections/73/asia.xml'),
         (u'果壳网天文', 'http://feed43.com/3144628515834775.xml'),
-        ('Matrix67', 'http://www.matrix67.com/blog/feed')
+        (u'Matrix67', 'http://www.matrix67.com/blog/feed')
         ]
